@@ -1,0 +1,26 @@
+{
+  "name": "feathers",
+  "version": "1.0.0",
+  "description": "feathers-mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sneezie510/feathers-mongodb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sneezie510/feathers-mongodb/issues"
+  },
+  "homepage": "https://github.com/sneezie510/feathers-mongodb#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "feathers-mongodb": "^3.1.0",
+    "feathers-rest": "^1.8.1",
+    "feathers-socketio": "^2.0.1",
+    "mongodb": "^3.0.7"
+  }
+}
