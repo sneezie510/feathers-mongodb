@@ -1,23 +1,16 @@
 var feathers = require('feathers');
+var mongodb = require('feathers-mongodb');
 var rest = require('feathers-rest');
 var socketio = require('feathers-socketio');
 var bodyParser = require('body-parser');
-var app = feathers();
 
-var todoService = {
-  todos: [{
-    text: 'Learn Feathers',
-    complete: false
-  }],
-  find: function (params, callback) {
-    callback(null, this.todos);
-  },
-  create: function (data, params, callback) {
-    this.todos.push(data);
-    // Call back with the Todo data
-    callback(null, data);
-  }
-}
+var app = feathers();
+// On MongoDB use the `feathers-demo` database
+// and the `todos` collection
+var todoService = mongodb({
+  db: 'feathers-demo',
+  collection: 'todos'
+});
 
 // Configure REST and SocketIO endpointss
 app.configure(rest());
